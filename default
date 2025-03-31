@@ -156,13 +156,13 @@ authorize {
 			ok
 		} else {
 			update control {
-				DISABLED_POOL := "Disabled_Plan"
+				Disabled-Pool := "Disabled_Plan"
 			}
-			if (&control:DISABLED_POOL && &control:DISABLED_POOL != "") {
+			if (&control:Disabled-Pool && &control:Disabled-Pool != "") {
 				ok
 				update reply {
-					Reply-Message := "User Not Found - assigned to Disabled Pool - %{control:DISABLED_POOL}"
-					Framed-Pool := "%{control:DISABLED_POOL}"
+					Reply-Message := "User Not Found - assigned to Disabled Pool - %{control:Disabled-Pool}"
+					Framed-Pool := "%{control:Disabled-Pool}"
 				}
 			} else { 
 				update reply {
